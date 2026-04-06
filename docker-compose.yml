@@ -1,0 +1,8 @@
+services:
+  tarantool:
+    image: tarantool/tarantool:3.2
+    ports:
+      - "3301:3301"
+    volumes:
+      - ./tarantool:/opt/tarantool
+    command: tarantool /opt/tarantool/init.lua
